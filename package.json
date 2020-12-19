@@ -4,7 +4,7 @@
   "main": "build/main.js",
   "license": "MIT",
   "scripts": {
-    "build": "cd build && node build.js"
+    "build": "node build/build.js && cp -rvf static/* site"
   },
   "dependencies": {
     "mustache": "^4.1.0",
