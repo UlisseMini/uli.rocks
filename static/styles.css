@@ -5,6 +5,9 @@ body {
 a { color: #337ab7; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Fix mobile device delay, because waiting for doubleclick */
+#canvas { touch-action: none; }
+
 .posttitle {
 	margin-bottom: 0px; /* for <footer> */
 }
