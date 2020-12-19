@@ -1,0 +1,13 @@
+{
+  "name": "uli.rocks",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd build && node build.js"
+  },
+  "dependencies": {
+    "mustache": "^4.1.0",
+    "yaml": "^2.0.0-1"
+  }
+}

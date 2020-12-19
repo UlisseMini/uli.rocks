@@ -1,0 +1,11 @@
+title: Polynomial interpolation
+subtitle: Using gaussian elimination
+thumb: poly.png
+
+
+<p>
+  Here is a simple demo of polynomial interpolation
+</p>
+<canvas id="canvas" width=600 height=600></canvas>
+<script src="tensor.js"></script>
+<script src="poly.js"></script>
