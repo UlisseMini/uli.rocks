@@ -1,0 +1,3 @@
+[submodule "static/js/poly"]
+	path = static/js/poly
+	url = https://github.com/ulissemini/poly
