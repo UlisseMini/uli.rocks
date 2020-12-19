@@ -58,6 +58,7 @@ var posts = fnames.map((fname) => {
 fnames.forEach((fname, i) => {
   var vars = h.meta(pdir + fname)
   vars.body = h.body(pdir + fname)
+  vars.pagedescription = vars.title + ' | ' + vars.subtitle
 
   var html = h.page('templates/post.mustache', vars)
 
@@ -70,6 +71,7 @@ fnames.forEach((fname, i) => {
 console.log(posts)
 var html = h.page('templates/home.mustache', {
   posts: posts,
+  pagedescription: "Ulisse Mini's personal website",
 })
 h.write('index.html', html)
 
