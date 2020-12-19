@@ -45,19 +45,31 @@ function write(relpath, data) {
 var h = {write: write, page: page, meta: meta, read: read, body: body}
 module.exports = h
 
+
 // ----------------------- build('posts') ------------------------------
 
 var pdir = 'content/posts/'
 
-var posts = fs.readdirSync(pdir)
+var fnames = fs.readdirSync(pdir)
+var posts = fnames.map((fname) => {
+  return {fname: fname, ...h.meta(pdir + fname)}
+})
 
-posts.forEach(post => {
-  var vars = h.meta(pdir + post)
-  vars.body = h.body(pdir + post)
+fnames.forEach((fname, i) => {
+  var vars = h.meta(pdir + fname)
+  vars.body = h.body(pdir + fname)
 
   var html = h.page('templates/post.mustache', vars)
 
-  h.write('posts/' + post + '.html', html)
+  h.write('posts/' + fname + '.html', html)
 })
 
+
+// ----------------------- build('home') ------------------------------
+
+console.log(posts)
+var html = h.page('templates/home.mustache', {
+  posts: posts,
+})
+h.write('index.html', html)
 
