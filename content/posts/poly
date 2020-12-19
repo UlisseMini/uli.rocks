@@ -40,7 +40,7 @@ A = [[1 1 1]
 b = [2, 2, 5] # what we want (y values for points)
 x = [a, b, c] # unknowns, what we're solving for
 </pre>
-Then you can use elimination to solve <code>Ax = b</code>, as I've done here.
+Then you can use elimination to solve <code>Ax = b</code>, as I've done <a href="https://github.com/ulissemini/poly">here</a>.
 
 </p>
 
