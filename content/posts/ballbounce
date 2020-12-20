@@ -1,6 +1,6 @@
 title: Balls
 subtitle: Fun with the canvas API
-thumb: img/balls.png
+thumb: balls.png
 
 
 <canvas id="canvas" width=800 height=500 style="background: gray;"></canvas>
