@@ -37,8 +37,8 @@ function setup() {
 }
 
 
-const radius = 30
-const speed = 3
+let radius = 30
+let speed = 3
 
 let balls = []
 
