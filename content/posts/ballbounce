@@ -1,0 +1,12 @@
+title: Balls
+subtitle: Fun with the canvas API
+thumb: img/balls.png
+
+
+<canvas id="canvas" width=800 height=500 style="background: gray;"></canvas>
+
+<script src="/js/ballbounce/balls.js"></script>
+
+<p>
+Just some fun with bouncing balls, don't read the code -- Its horrible.
+</p>
