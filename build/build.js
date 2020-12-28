@@ -51,18 +51,27 @@ module.exports = h
 var pdir = 'content/posts/'
 
 var fnames = fs.readdirSync(pdir)
-var posts = fnames.map((fname) => {
-  return {fname: fname, ...h.meta(pdir + fname)}
+var posts = []
+fnames.forEach(fname => {
+  posts.push({fname: fname, ...h.meta(pdir + fname)})
 })
 
-fnames.forEach(fname => {
-  var vars = h.meta(pdir + fname)
-  vars.body = h.body(pdir + fname)
+// newest first
+posts.sort((a,b) => {
+  return Date.parse(b.date) - Date.parse(a.date)
+})
+
+posts.forEach(vars => {
+  vars.body = h.body(pdir + vars.fname)
   vars.pagedescription = vars.title + ' | ' + vars.subtitle
 
   var html = h.page('templates/post.mustache', vars)
 
-  h.write('posts/' + fname + '.html', html)
+  h.write('posts/' + vars.fname + '.html', html)
+
+  // no need to remember the body after we generate the post.
+  // (vars is ptr to obj in posts)
+  delete vars.body
 })
 
 
