@@ -1,6 +1,7 @@
 title: Balls
-subtitle: Fun with the canvas API
+subtitle: Fun with the canvas api and bouncing balls
 thumb: balls.png
+date: 2020-12-20
 
 
 <canvas id="canvas" width=800 height=500 style="background: gray;"></canvas>
