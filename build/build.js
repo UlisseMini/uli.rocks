@@ -55,7 +55,7 @@ var posts = fnames.map((fname) => {
   return {fname: fname, ...h.meta(pdir + fname)}
 })
 
-fnames.forEach((fname, i) => {
+fnames.forEach(fname => {
   var vars = h.meta(pdir + fname)
   vars.body = h.body(pdir + fname)
   vars.pagedescription = vars.title + ' | ' + vars.subtitle
