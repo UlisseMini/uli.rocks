@@ -9,5 +9,8 @@ a:hover { text-decoration: underline; }
 #canvas { touch-action: none; }
 
 .posttitle {
-	margin-bottom: 0px; /* for <footer> */
+	margin-bottom: 0px;
 }
+
+.date { margin: 0; }
+.subtitle { }
