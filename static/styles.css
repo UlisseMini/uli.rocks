@@ -8,7 +8,7 @@ a:hover { text-decoration: underline; }
 /* Fix mobile device delay, because waiting for doubleclick */
 #canvas { touch-action: none; }
 
-.posttitle {
+.posttitle, .projtitle {
 	margin-bottom: 0px;
 }
 
