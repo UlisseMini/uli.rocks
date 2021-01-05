@@ -4,8 +4,10 @@ I'm Ulisse Mini, I love math, programming, and programming math.
 <br/>
 Here's my <a href="https://github.com/UlisseMini">Github</a> and <a href="https://twitter.com/MiniUlisse">Twitter</a>, My discord handle is <code>uli#4334</code>
 <br/>
-I'm learning web development, some experiments can be found below.
+I'm learning web development, some experiments and blog posts can be found below.
 </p>
+
+<h1>Posts</h1>
 
 {{#posts}}
 	<h2 class="posttitle">{{title}}</h2>
@@ -16,3 +18,13 @@ I'm learning web development, some experiments can be found below.
 	<p class="subtitle">{{subtitle}}</p>
 {{/posts}}
 
+<h1>Projects</h1>
+
+{{#projects}}
+	<h2 class="posttitle">{{title}}</h2>
+	<p class="date">{{date}}</p>
+	<a href="/p/{{fname}}.html">
+		<img src="/img/{{thumb}}" alt="{{title}}" class="thumb">
+	</a>
+	<p class="subtitle">{{subtitle}}</p>
+{{/projects}}

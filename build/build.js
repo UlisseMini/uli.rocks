@@ -41,37 +41,43 @@ function write(relpath, data) {
   console.log('wrote', fullpath)
 }
 
+function readMany(dir) {
+  var fnames = fs.readdirSync(dir)
+  var data = []
+  var data = fnames.map(fname => { return {
+    fname: fname,
+    body: h.body(dir + fname),
+    ...h.meta(dir + fname) // TODO: filepath join
+  }})
+  data.sort((a,b) => Date.parse(b.date) - Date.parse(a.date))
+
+  return data
+}
+
 // Was having trouble with module system
-var h = {write: write, page: page, meta: meta, read: read, body: body}
+var h = {write: write, page: page, meta: meta, read: read, body: body, readMany: readMany}
 module.exports = h
 
 
 // ----------------------- build('posts') ------------------------------
 
-var pdir = 'content/posts/'
-
-var fnames = fs.readdirSync(pdir)
-var posts = []
-fnames.forEach(fname => {
-  posts.push({fname: fname, ...h.meta(pdir + fname)})
-})
-
-// newest first
-posts.sort((a,b) => {
-  return Date.parse(b.date) - Date.parse(a.date)
-})
+var posts = h.readMany('content/posts/')
 
 posts.forEach(vars => {
-  vars.body = h.body(pdir + vars.fname)
   vars.pagedescription = vars.title + ' | ' + vars.subtitle
-
   var html = h.page('templates/post.mustache', vars)
-
   h.write('posts/' + vars.fname + '.html', html)
+})
 
-  // no need to remember the body after we generate the post.
-  // (vars is ptr to obj in posts)
-  delete vars.body
+// ----------------------- build('projects') --------------------------
+
+// This is duplication, but I might need to change something specifc here, so I'd
+// rather keep them separate.
+var projects = h.readMany('content/projects/')
+projects.forEach(vars => {
+  vars.pagedescription = vars.title + ' | ' + vars.subtitle
+  var html = h.page('templates/project.mustache', vars)
+  h.write('p/' + vars.fname + '.html', html)
 })
 
 
@@ -80,6 +86,7 @@ posts.forEach(vars => {
 console.log(posts)
 var html = h.page('templates/home.mustache', {
   posts: posts,
+  projects: projects,
   pagedescription: "Ulisse Mini's personal website",
 })
 h.write('index.html', html)
