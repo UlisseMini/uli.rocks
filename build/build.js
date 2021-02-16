@@ -1,4 +1,5 @@
 var h = require('./helpers')
+var marked = require('marked')
 
 // Build posts, posts (will be) written in markdown files
 
@@ -6,7 +7,11 @@ var posts = h.readMany('content/posts/')
 
 posts.forEach(vars => {
   vars.pagedescription = vars.title + ' | ' + vars.subtitle
-  var html = h.page('templates/post.mustache', vars)
+  if (vars.fname.slice(-3) == '.md') {
+    vars.body = marked(vars.body)
+    vars.fname = vars.fname.slice(0, -3)
+  }
+  var html = h.page('templates/post.mustache', vars) // render template
   h.write('posts/' + vars.fname + '.html', html)
 })
 

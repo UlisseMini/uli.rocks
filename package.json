@@ -7,6 +7,7 @@
     "build": "node build/build.js && cp -rvf static/* site"
   },
   "dependencies": {
+    "marked": "^2.0.0",
     "mustache": "^4.1.0",
     "yaml": "^2.0.0-1"
   }
