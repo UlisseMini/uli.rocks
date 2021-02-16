@@ -43,7 +43,6 @@ function write(relpath, data) {
 
 function readMany(dir) {
   var fnames = fs.readdirSync(dir)
-  var data = []
   var data = fnames.map(fname => {
     return {
       fname: fname,
