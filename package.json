@@ -9,6 +9,7 @@
   "dependencies": {
     "marked": "^2.0.0",
     "mustache": "^4.1.0",
+    "prismjs": "^1.23.0",
     "yaml": "^2.0.0-1"
   }
 }

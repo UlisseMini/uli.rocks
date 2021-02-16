@@ -1,6 +1,23 @@
 var h = require('./helpers')
 var marked = require('marked')
 
+// Setup syntax highlighting
+
+var prism = require('prismjs')
+var loadLanguages = require('prismjs/components/');
+
+loadLanguages(['javascript', 'jsx', 'css', 'markup', 'bash', 'json', 'python', 'c', 'rust'])
+
+marked.setOptions({
+  highlight: function (code, lang) {
+    if (prism.languages[lang]) {
+      return prism.highlight(code, prism.languages[lang], lang)
+    } else {
+      return code
+    }
+  }
+})
+
 // Build posts, posts (will be) written in markdown files
 
 var posts = h.readMany('content/posts/')
