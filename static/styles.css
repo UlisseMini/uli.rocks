@@ -4,6 +4,11 @@ body {
 	margin: 0 auto;
 }
 
+.thumb {
+	max-width: 600px;
+	max-height: 400px;
+}
+
 a { color: #337ab7; text-decoration: none; }
 a:hover { text-decoration: underline; }
 code { font-size: 16px; }
@@ -11,7 +16,7 @@ code { font-size: 16px; }
 /* Fix mobile device delay, because waiting for doubleclick */
 #canvas { touch-action: none; }
 
-.posttitle, .projtitle {
+.posttitle {
 	margin-bottom: 0px;
 }
 

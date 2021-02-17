@@ -22,23 +22,12 @@ Here's my <a href="https://github.com/UlisseMini">Github</a> and <a href="https:
 Some experiments and blog posts can be found below.
 </p>
 
-<h1>Projects</h1>
-
-{{#projects}}
-	<h2 class="projtitle">{{title}}</h2>
+{{#posts}}
+	<h2 class="posttitle">{{title}}</h2>
 	<p class="date">{{date}}</p>
 	<a href="/p/{{fname}}.html">
 		<img src="/img/{{thumb}}" alt="{{title}}" class="thumb">
 	</a>
 	<p class="subtitle">{{subtitle}}</p>
-{{/projects}}
-
-<h1>Posts</h1>
-
-{{#posts}}
-	<h2 class="posttitle">
-		<a href="/posts/{{fname}}.html">{{title}}</a>
-	</h2>
-	<p class="date">{{date}}</p>
 {{/posts}}
 
