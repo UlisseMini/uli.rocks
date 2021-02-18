@@ -7,6 +7,7 @@
     "build": "node build/build.js && cp -rvf static/* site"
   },
   "dependencies": {
+    "katex": "^0.12.0",
     "marked": "^2.0.0",
     "mustache": "^4.1.0",
     "prismjs": "^1.23.0",

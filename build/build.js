@@ -1,22 +1,5 @@
 var h = require('./helpers')
-var marked = require('marked')
-
-// Setup syntax highlighting
-
-var prism = require('prismjs')
-var loadLanguages = require('prismjs/components/');
-
-loadLanguages(['javascript', 'jsx', 'css', 'markup', 'bash', 'json', 'python', 'c', 'rust'])
-
-marked.setOptions({
-  highlight: function (code, lang) {
-    if (prism.languages[lang]) {
-      return prism.highlight(code, prism.languages[lang], lang)
-    } else {
-      return code
-    }
-  }
-})
+var marked = require('./marked')
 
 // Build posts, posts (will be) written in markdown files
 
@@ -34,7 +17,6 @@ posts.forEach(vars => {
 
 // Build the homepage, this requires posts for generating links.
 
-console.log(posts)
 var html = h.page('templates/home.mustache', {
   posts: posts,
   pagedescription: "Ulisse Mini's personal website",
