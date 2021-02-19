@@ -19,7 +19,7 @@ marked.use({
   renderer: {
     codespan: (code) => {
       if (code[0] == '$') {
-        return katex.renderToString(code.slice(1), {throwOnError: false, displayMode: false})
+        return katex.renderToString(code.slice(1), {displayMode: false})
       }
 
       return false
@@ -28,7 +28,7 @@ marked.use({
     code: (code, infostring, _escapeed) => {
       console.log('info', infostring)
       if (infostring == 'tex') {
-        return katex.renderToString(code, {throwOnError: false, displayMode: true})
+        return katex.renderToString(code, {displayMode: true})
       }
 
       return false
