@@ -18,7 +18,7 @@ f'(x) = \frac{f(x)}{b} \implies b = \frac{f(x)}{f'(x)}
 Intuitively `$\frac{dx}{dy} f(x_1)`, is converting some change in Y to the corresponding change in X.
 Using this we can now find `$x_2` using `$b`
 ```tex
-x_2 = x_1 - \text{(base)} = x_1 - \frac{f(x)}{f^\prime(x)}
+x_2 = x_1 - b = x_1 - \frac{f(x)}{f^\prime(x)}
 ```
 
 Thus the general formula for improving our guess `$x_n` to a better guess `$x_{n+1}` is
