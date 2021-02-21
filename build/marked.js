@@ -18,6 +18,8 @@ marked.setOptions({
 marked.use({
   renderer: {
     codespan: (code) => {
+      // TODO: Fix escaped characters (eg ') being sanitized, then causing latex errors,
+      // Maybe unescape? or yell at marked to add another argument to codespan?
       if (code[0] == '$') {
         return katex.renderToString(code.slice(1), {displayMode: false})
       }
