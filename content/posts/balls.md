@@ -8,4 +8,4 @@ date: 2020-12-20
 
 <script src="/js/ballbounce/balls.js"></script>
 
-Just some fun with bouncing balls, don't read the code -- Its horrible.
+Playing with canvas, I'll improve this later and explain here.
