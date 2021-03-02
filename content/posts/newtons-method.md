@@ -10,7 +10,7 @@ You might come up with the clever idea of approximating `$f(x)` by a tangent lin
 
 <iframe src="https://www.desmos.com/calculator/fayhfuft5b?embed" width="600px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-`$\frac{f(x_1)}{f^\prime(x_1)}` is the base because derivative is slope, which gives us
+`$\frac{f(x_1)}{f^\prime(x_1)}` is the base because derivative is slope, which gives us the base `$b`
 ```tex
 f'(x) = \frac{f(x)}{b} \implies b = \frac{f(x)}{f'(x)}
 ```
