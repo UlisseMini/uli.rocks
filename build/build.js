@@ -15,6 +15,19 @@ posts.forEach(vars => {
   h.write('p/' + vars.fname + '.html', html)
 })
 
+// Build journal
+var journals = h.readMany('content/journal/')
+
+var html = h.page('templates/journal-list.mustache', {
+  journals: journals.map(vars => {
+    return {
+      body: marked(vars.body),
+      date: vars.fname.slice(0, -3),
+    }
+  })
+})
+h.write('j.html', html)
+
 // Build the homepage, this requires posts for generating links.
 
 var html = h.page('templates/home.mustache', {
