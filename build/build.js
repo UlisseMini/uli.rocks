@@ -22,7 +22,7 @@ var html = h.page('templates/journal-list.mustache', {
   journals: journals.map(vars => {
     return {
       body: marked(vars.body),
-      date: vars.fname.slice(0, -3),
+      date: vars.date, // or fname, same thing
     }
   })
 })
