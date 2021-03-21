@@ -4,7 +4,9 @@
   "main": "build/main.js",
   "license": "MIT",
   "scripts": {
-    "build": "node build/build.js && cp -rvf static/* site"
+    "build": "node build/build.js && cp -rvf static/* site",
+    "watch-build": "rg --files | entr yarn build",
+    "dev": "browser-sync site --files 'site/*.html' --no-online --no-open"
   },
   "dependencies": {
     "katex": "^0.12.0",
@@ -12,5 +14,8 @@
     "mustache": "^4.1.0",
     "prismjs": "^1.23.0",
     "yaml": "^2.0.0-1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
   }
 }
