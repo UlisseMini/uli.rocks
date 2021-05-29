@@ -9,8 +9,10 @@
     "dev": "vite ./site"
   },
   "dependencies": {
+    "markdown-it": "^12.0.6",
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
+    "markdown-it-footnote": "^3.0.3",
     "katex": "^0.12.0",
-    "marked": "^2.0.0",
     "mustache": "^4.1.0",
     "prismjs": "^1.23.0",
     "yaml": "^2.0.0-1"
