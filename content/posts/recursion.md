@@ -15,7 +15,7 @@ fib(35) # => 9227465
 ```
 
 If you run this code yourself, you'll notice `fib(35)` takes a long time to run, that's because fib gets called 29860703 times to compute `fib(35)`.
-which is exponential complexity! `$O(2^n)` [[1]](#fn-1)
+which is exponential complexity! $O(2^n)$ [[1]](#fn-1)
 
 
 Nobody should be taught recursion like this, the correct [[2]](#fn-2) way to write `fib(n)` is
@@ -28,7 +28,7 @@ def fib(n):
   return curr
 ```
 
-Harder to understand? Yes, but this is `$O(n)`. so we can compute `fib(100_000)` in an instant. [[3]](#fn-2)
+Harder to understand? Yes, but this is $O(n)$. so we can compute `fib(100_000)` in an instant. [[3]](#fn-2)
 
 The real time you use recursion is for traversing some kind of tree, ie. in [minimax](https://en.wikipedia.org/wiki/Minimax#Pseudocode) for solving tictactoe (psudocode)
 
@@ -50,6 +50,6 @@ def minimax(board) -> float:
 Stop recursion abuse!
 
 ## Footnotes
-1. <a name="fn-1"></a> Actually a better upper bound is `$O(\phi^n)` see [here](https://evoniuk.github.io/posts/fibonacci.html).
+1. <a name="fn-1"></a> Actually a better upper bound is $O(\phi^n)$ see [here](https://evoniuk.github.io/posts/fibonacci.html).
 2. <a name="fn-2"></a> Using `lru_cache(maxsize=3)` from functools makes it fast but still stack bounded (credit to ender)
-3. <a name="fn-3"></a> An explicit formula [exists](https://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html) so you could say `$O(\log n)` is optimal
+3. <a name="fn-3"></a> An explicit formula [exists](https://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html) so you could say $O(\log n)$ is optimal

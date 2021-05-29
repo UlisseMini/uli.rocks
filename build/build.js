@@ -1,8 +1,11 @@
 var h = require('./helpers')
 
-var md = require('markdown-it')()
+var md = require('markdown-it')({
+  html: true, // enable html tags in markdown
+})
 md.use(require('@iktakahiro/markdown-it-katex'))
 md.use(require('markdown-it-footnote'))
+md.use(require('markdown-it-prism'))
 
 // Build posts, posts (will be) written in markdown files
 
