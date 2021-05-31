@@ -1,13 +1,16 @@
 title: Generating Functions
 subtitle: A crazy solution to the dice problem
-thumb: generating-functions.png
 date: 2021-05-20
-draft: true
+
+
+> A generating function is a device somewhat similar to a bag. Instead of carrying many little objects detachedly, which could be embarrassing, we put them all in a bag, and then we have only one object to carry, the bag.
+
+> \- George Pólya, Mathematics and plausible reasoning (1954)
 
 
 ## Probability generating function
 
-We define a PGF as $g(t) = E[t^X]$, for this article $X$ will be a **discrete** random variable.
+We define a PGF as $g(t) = E[t^X]$. for this article $X$ will be a **discrete** random variable.
 
 This is an interesting defintion since by [LOTUS](https://www.wikiwand.com/en/Law_of_the_unconscious_statistician) with $p_k = P(X = k)$
 
@@ -32,7 +35,7 @@ $$
 g'(1) = \sum_{k=0}^{\infty} p_k k \cdot 1^{k-1} = \sum_{k=0}^{\infty} k p_k = E[X]
 $$
 
-This is useful because finding expected values can be easier then finding probabilies since we have linearity and 
+This is useful because finding expected values can be easier then finding probabilies since we have linearity.
 
 ## Dice problem
 
@@ -50,16 +53,6 @@ We know $g^{(18)}(0) = P(X = 18)$ leading us to the amazing conclusion
 > *The probability of six die summing to 18 is the coefficient of the $t^{18}$ term*
 
 Simplifying this to make finding the coefficients easier is now a matter of algebra not probability!
-
-
-## Generating functions herustic
-
-> A generating function is a device somewhat similar to a bag. Instead of carrying many little objects detachedly, which could be embarrassing, we put them all in a bag, and then we have only one object to carry, the bag.
-
-> \- George Pólya, Mathematics and plausible reasoning (1954)
-
-This might feel like magic or abusing math, introducing a variable $t$ for the sole purpose of bookkeeping for differentiation! I'll try to describe a general herustic for when generating functions are applicable
-
 
 ## Proof of expectation
 (Assume X,Y are discrete, the continuous case is done by interchanging integrals)
@@ -82,4 +75,4 @@ This bugged me, as a programmer I hate doing things manually. but not seeing a b
 Interestingly, a similar thing happened to Frederick Mosteller in his sophomore year[^1]
 
 
-[^1]: This link https://math.stackexchange.com/a/2137473
+[^1]: [https://math.stackexchange.com/a/2137473](https://math.stackexchange.com/a/2137473)
