@@ -1,6 +1,5 @@
 title: Recursion abuse
 subtitle: Just write a loop, please
-thumb: recursion.svg
 date: 2021-02-16
 
 

@@ -1,6 +1,5 @@
 title: Polynomial interpolation
 subtitle: From scratch, using gaussian elimination
-thumb: poly.png
 date: 2020-12-19
 
 

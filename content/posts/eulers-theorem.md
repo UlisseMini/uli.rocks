@@ -1,6 +1,5 @@
 title: Eulers Theorem
 subtitle: Groups make it easy
-thumb: euler-totient.png
 date: 2021-04-15
 
 

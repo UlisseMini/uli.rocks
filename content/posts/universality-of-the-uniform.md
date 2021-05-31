@@ -1,6 +1,5 @@
 title: Universality of the uniform
 subtitle: Transformations over probability distributions
-thumb: universality-of-the-uniform.png
 date: 2021-05-19
 draft: true
 

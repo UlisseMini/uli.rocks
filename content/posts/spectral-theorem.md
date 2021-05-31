@@ -1,6 +1,5 @@
 title: Spectral Theorem
 subtitle: When can a matrix be diagonalized?
-thumb: spectral-theorem.png
 date: 2021-05-07
 draft: true
 

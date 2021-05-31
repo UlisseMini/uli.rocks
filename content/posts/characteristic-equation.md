@@ -1,6 +1,5 @@
 title: Characteristic Equations
 subtitle: SUBTITLE
-thumb: characteristic-equation.png
 date: 2021-05-06
 draft: true
 

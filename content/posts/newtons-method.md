@@ -1,6 +1,5 @@
 title: Newton's Method
 subtitle: Finding roots of functions
-thumb: newtons-method.png
 date: 2021-02-21
 
 

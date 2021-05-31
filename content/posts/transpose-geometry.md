@@ -1,6 +1,5 @@
 title: The geometry of the transpose
 subtitle: SUBTITLE
-thumb: transpose-geometry.png
 date: 2021-03-09
 draft: true
 
