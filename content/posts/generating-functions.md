@@ -54,6 +54,14 @@ We know $g^{(18)}(0) = P(X = 18)$ leading us to the amazing conclusion
 
 Simplifying this to make finding the coefficients easier is now a matter of algebra not probability!
 
+## Intuition
+
+Take a polynomial, say the from the PGF of summing 3 fair dice
+$$(t^1 + t^2 + \dots + t^6)^3$$
+Think about getting the $t^10$ term, you can pick $t^6$, $t^3$ and $t^1$. but you could also pick different terms, like $t^5$, $t^4$ and $t^1$.
+
+Counting the ways of picking the terms that have product $t^{10}$ is the same as counting dice rolls. except here we have the full power of algebra at our disposal.
+
 ## Proof of expectation
 (Assume X,Y are discrete, the continuous case is done by interchanging integrals)
 
