@@ -20,7 +20,7 @@ function meta(filename) {
 
 function page(template, vars) {
   if (!template) throw Error('template not provided')
-  template = 'templates/' + template + '.mustache'
+  template = path.join('templates', template + '.mustache')
   vars['pagetitle'] = vars['title'] || 'Ulisse Mini'
 
   html = Mustache.render(read('templates/header.mustache'), vars)
@@ -32,7 +32,7 @@ function page(template, vars) {
 }
 
 function write(relpath, data) {
-  var fullpath = 'site/' + relpath
+  var fullpath = path.join('site/', relpath)
   var dirname = path.dirname(fullpath)
   if (!fs.existsSync(dirname)) {
     fs.mkdirSync(dirname, {recursive: true})
@@ -47,8 +47,8 @@ function readMany(dir) {
   var data = fnames.map(fname => {
     return {
       fname: fname,
-      body: h.body(dir + fname),
-      ...h.meta(dir + fname) // TODO: filepath join
+      body: h.body(path.join(dir, fname)),
+      ...h.meta(path.join(dir, fname))
     }
   })
   data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
