@@ -17,14 +17,14 @@ posts.forEach(vars => {
     vars.body = md.render(vars.body)
     vars.fname = vars.fname.slice(0, -3)
   }
-  var html = h.page('templates/post.mustache', vars) // render template
+  var html = h.page('post', vars) // render template
   h.write('p/' + vars.fname + '.html', html)
 })
 
 // Build journal
 var journals = h.readMany('content/journal/')
 
-var html = h.page('templates/journal-list.mustache', {
+var html = h.page('journal-list', {
   journals: journals.map(vars => {
     return {
       body: md.render(vars.body),
@@ -36,7 +36,7 @@ h.write('j.html', html)
 
 // Build the homepage, this requires posts for generating links.
 
-var html = h.page('templates/index.mustache', {
+var html = h.page('index', {
   body: md.render(h.read('content/index.md')),
   posts: posts.filter(p => !p.draft),
   pagedescription: "Ulisse Mini's personal website",

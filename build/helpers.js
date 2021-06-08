@@ -20,6 +20,7 @@ function meta(filename) {
 
 function page(template, vars) {
   if (!template) throw Error('template not provided')
+  template = 'templates/' + template + '.mustache'
   vars['pagetitle'] = vars['title'] || 'Ulisse Mini'
 
   html = Mustache.render(read('templates/header.mustache'), vars)
@@ -34,7 +35,7 @@ function write(relpath, data) {
   var fullpath = 'site/' + relpath
   var dirname = path.dirname(fullpath)
   if (!fs.existsSync(dirname)) {
-    fs.mkdirSync(dirname, {recursive: true, })
+    fs.mkdirSync(dirname, {recursive: true})
   }
 
   fs.writeFileSync(fullpath, data)
