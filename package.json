@@ -4,7 +4,7 @@
   "main": "build/main.js",
   "license": "MIT",
   "scripts": {
-    "build": "node build/build.js && cp -rvf static/* site",
+    "build": "node build/build.js",
     "watch-build": "rg --files | entr yarn build",
     "dev": "vite ./site"
   },

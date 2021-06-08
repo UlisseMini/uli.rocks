@@ -43,3 +43,6 @@ var html = h.page('templates/index.mustache', {
 })
 h.write('index.html', html)
 
+// Copy static files over (fuck you windows :D)
+const {execSync} = require("child_process");
+execSync("cp -rf ./static/* ./site", {stdio: 'inherit'})
