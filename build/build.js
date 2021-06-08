@@ -36,7 +36,8 @@ h.write('j.html', html)
 
 // Build the homepage, this requires posts for generating links.
 
-var html = h.page('templates/home.mustache', {
+var html = h.page('templates/index.mustache', {
+  body: md.render(h.read('content/index.md')),
   posts: posts.filter(p => !p.draft),
   pagedescription: "Ulisse Mini's personal website",
 })
