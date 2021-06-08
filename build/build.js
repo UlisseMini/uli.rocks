@@ -43,6 +43,13 @@ var html = h.page('index', {
 })
 h.write('index.html', html)
 
+var html = h.page('index', {
+  body: md.render(h.read('content/index.md')),
+  posts: posts.filter(p => p.draft),
+  pagedescription: "Ulisse Mini's personal website",
+})
+h.write('drafts.html', html)
+
 // Copy static files over (fuck you windows :D)
 const {execSync} = require("child_process");
 execSync("cp -rf ./static/* ./site", {stdio: 'inherit'})
