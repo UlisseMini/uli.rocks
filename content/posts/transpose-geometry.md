@@ -11,9 +11,9 @@ My goal is to deepen that visual understanding to the transpose.
 
 ## Transpose properties
 
-```tex
+$$
 (AB)^T = B^T A^T
-```
+$$
 Proof: *TODO: geometric proof*
 
 ## Orthogonal matrices are rotations or reflections
@@ -26,9 +26,9 @@ Proof:
 *circular argument if I use this fact for deriving the polar decomposition?*
 
 Proof:
-```tex
+$$
 A = A^T \implies QS = SQ^T \implies S = QSQ^T
-```
+$$
 Notice $S = QSQ^T$
 
 
@@ -40,9 +40,9 @@ Proof:
 Let $A = QS$ for orthogonal $Q$ and symmetric/orthoscaling $S$.
 
 Multiply by $A^T$
-```tex
+$$
 A^T A = SQ^TQS = SS = S^2
-```
+$$
 Now, if we fine $S$ we're half done, then we just need to find $Q$.
 
 Define a "matrix square root", $\sqrt{M^2} = M$. <br/>
