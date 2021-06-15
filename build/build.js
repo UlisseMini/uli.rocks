@@ -17,7 +17,6 @@ posts.forEach(vars => {
     vars.body = md.render(vars.body)
     vars.fname = vars.fname.slice(0, -3) + '.html'
   }
-  console.log('fname', vars.fname)
   var html = h.page('post', vars) // render template
   h.write('p/' + vars.fname, html)
 })
