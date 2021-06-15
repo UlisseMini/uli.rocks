@@ -42,6 +42,17 @@ function write(relpath, data) {
   console.log('wrote', fullpath)
 }
 
+function parseDate(date) {
+  var d = Date.parse(date)
+  if (isNaN(d)) {throw new Error(`invalid date '${date}'`)}
+  return d
+}
+
+function sortByDate(data) {
+  data.sort((a, b) => parseDate(b.date) - parseDate(a.date))
+  return data
+}
+
 function readMany(dir) {
   var fnames = fs.readdirSync(dir)
   var data = fnames.map(fname => {
@@ -51,7 +62,7 @@ function readMany(dir) {
       ...h.meta(path.join(dir, fname))
     }
   })
-  data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+  sortByDate(data)
 
   return data
 }
