@@ -18,15 +18,5 @@ a:hover { text-decoration: underline; }
 code { font-size: 1rem; }
 
 /* Fix mobile device delay, because waiting for doubleclick */
-#canvas { touch-action: none; }
+canvas { touch-action: none; }
 
-.posttitle {
-	margin-bottom: 0px;
-}
-
-.posttitle a {
-	color: #000;
-}
-
-.date { margin: 0; }
-.subtitle { margin-top: 0; }
