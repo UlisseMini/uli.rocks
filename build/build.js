@@ -15,10 +15,11 @@ posts.forEach(vars => {
   vars.pagedescription = vars.title + ' | ' + vars.subtitle
   if (vars.fname.slice(-3) == '.md') {
     vars.body = md.render(vars.body)
-    vars.fname = vars.fname.slice(0, -3)
+    vars.fname = vars.fname.slice(0, -3) + '.html'
   }
+  console.log('fname', vars.fname)
   var html = h.page('post', vars) // render template
-  h.write('p/' + vars.fname + '.html', html)
+  h.write('p/' + vars.fname, html)
 })
 
 // Build journal
