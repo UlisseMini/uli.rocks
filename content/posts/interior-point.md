@@ -75,6 +75,21 @@ $$
 
 For our purposes $f_t(x) = t c^Tx + F(x)$
 
+(TODO: Finish analysis/simplify lecture. for now I'm just stealing the t update rule.)
+
+$\nu$ is defined [here](https://youtu.be/4mpq-wsYBxw?t=4500) in the lecture
+
+A result in the lecture is
+$$
+t' \le t\left(1 + \frac{1}{4\sqrt \nu}\right)
+$$
+Which means we can increase $t$ by a factor of $4^{-1} \nu^{-1/2}$.
+
+What is $\nu$ for the log barrier? (shown below)?
+$$
+F(x) = - \sum_i \log(b_i - (Ax)_i)
+$$
+TODO: Find $\nu$
 
 
 [^4]: The reason we restate in terms of the newton decrement is because the standard newton's method analysis isn't invariant under linear transformations.
