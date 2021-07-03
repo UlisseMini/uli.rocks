@@ -59,7 +59,7 @@ function sortByDate(data) {
 function prettyDate(epoch) {
   const d = new Date(epoch)
   const shortMonthName = new Intl.DateTimeFormat("en-US", {month: "short"}).format;
-  return `${d.getFullYear()} ${shortMonthName(d)} ${d.getDay()}`
+  return `${d.getFullYear()} ${shortMonthName(d)} ${d.getDate()}`
 }
 
 h.readMany = function (dir) {
