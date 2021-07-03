@@ -1,7 +1,7 @@
 title: Universality of the uniform
 subtitle: Transformations over probability distributions
 date: 2021-05-19
-cats: ["draft"]
+cats: ["drafts"]
 
 
 
