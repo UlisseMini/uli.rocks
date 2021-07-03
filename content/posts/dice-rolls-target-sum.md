@@ -1,7 +1,7 @@
 title: Dice rolls with target sum
 subtitle: More generating functions
 date: 2021-06-01
-draft: true
+cats: ["drafts"]
 
 
 Doing this [leetcode](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)

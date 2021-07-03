@@ -1,6 +1,7 @@
 title: Polynomial interpolation
 subtitle: From scratch, using gaussian elimination
 date: 2020-12-19
+cats: ["index", "math"]
 
 
 Click to add points

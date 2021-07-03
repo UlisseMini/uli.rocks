@@ -1,7 +1,7 @@
 title: Characteristic Equations
 subtitle: SUBTITLE
 date: 2021-05-06
-draft: true
+cats: ["drafts"]
 
 
 I noticed a pattern recently where you can solve problems by "guessing" the form of the solution

@@ -71,6 +71,7 @@ h.readMany = function (dir) {
       humandate: () => prettyDate(parseDate(view.date)),
       ...h.meta(path.join(dir, fname)),
     }
+    if (!view.cats) view.cats = ['index']
 
     return view
   })

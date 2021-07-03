@@ -1,7 +1,7 @@
 title: The Gamma distribution
 subtitle: Intuitive explaination of the Gamma distribution
 date: 2021-06-10
-draft: true
+cats: ["drafts"]
 
 
 ## TODO

@@ -1,6 +1,7 @@
 title: Newton's Method
 subtitle: Finding roots of functions
 date: 2021-02-21
+cats: ["drafts"]
 
 
 Let's say we want to find $f(x) = 0$ for some function, where solving explicitly is impossible. but you can evaluate $f(x)$ and $f^\prime(x)$

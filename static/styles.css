@@ -21,3 +21,12 @@ code { font-size: 1rem; }
 canvas { touch-action: none; }
 
 .date { color: #666; font-size: 0.9rem; }
+.cat {
+	display: inline-block;
+	width: 100px;
+}
+.cats {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}

@@ -34,21 +34,34 @@ let html = h.page('journal-list', {
 })
 h.write('j.html', html)
 
-// Build the homepage, this requires posts for generating links.
 
-html = h.page('index', {
-  body: md.render(h.read('content/index.md')),
-  posts: posts.filter(p => !p.draft),
-  pagedescription: "Ulisse Mini's personal website",
-})
-h.write('index.html', html)
+// Build the homepage
 
-html = h.page('index', {
-  body: md.render(h.read('content/index.md')),
-  posts: posts.filter(p => p.draft),
-  pagedescription: "Ulisse Mini's personal website",
+const unique = (x) => Array.from(new Set(x))
+const catPath = (cat) => `${cat}.html`
+
+let cats = new Set(posts.flatMap(p => unique(p.cats)))
+cats.add('index') // default cat (also default in readMany)
+cats = Array.from(cats).sort()
+
+const catsView = cats.map(cat => {
+  return {
+    'cat': cat,
+    'href': catPath(cat),
+    'humancat': () => cat[0].toUpperCase() + cat.slice(1),
+  }
 })
-h.write('drafts.html', html)
+
+cats.forEach(cat => {
+  html = h.page('index', {
+    body: md.render(h.read('content/index.md')),
+    posts: posts.filter(p => p.cats.includes(cat)),
+    pagedescription: "Ulisse Mini's personal website",
+    cats: catsView,
+  })
+  h.write(catPath(cat), html)
+})
+
 
 // Copy static files over (fuck you windows :D)
 const {execSync} = require("child_process");

@@ -1,6 +1,7 @@
 title: Eulers Theorem
 subtitle: Groups make it easy
 date: 2021-04-15
+cats: ["index", "math"]
 
 
 This is euler's theorem (for coprime n and k)

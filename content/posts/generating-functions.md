@@ -1,6 +1,7 @@
 title: Generating Functions
 subtitle: A crazy solution to the dice problem
 date: 2021-05-20
+cats: ["index", "math"]
 
 
 > A generating function is a device somewhat similar to a bag. Instead of carrying many little objects detachedly, which could be embarrassing, we put them all in a bag, and then we have only one object to carry, the bag.

@@ -1,6 +1,7 @@
 title: Recursion abuse
 subtitle: Just write a loop, please
 date: 2021-02-16
+cats: ["index", "coding"]
 
 
 I hate when people introduce recursion with something like this

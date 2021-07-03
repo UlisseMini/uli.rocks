@@ -1,7 +1,8 @@
 title: Interior point
 subtitle: Solving linear programming problems
 date: 2021-05-20
-draft: true
+cats: ["drafts"]
+
 
 ## Main idea
 
