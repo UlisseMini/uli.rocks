@@ -20,3 +20,4 @@ code { font-size: 1rem; }
 /* Fix mobile device delay, because waiting for doubleclick */
 canvas { touch-action: none; }
 
+.date { color: #666; font-size: 0.9rem; }
