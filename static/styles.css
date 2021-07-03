@@ -14,7 +14,7 @@ body {
 }
 
 a { color: #337ab7; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: underline; color: #005895;}
 code { font-size: 1rem; }
 
 /* Fix mobile device delay, because waiting for doubleclick */

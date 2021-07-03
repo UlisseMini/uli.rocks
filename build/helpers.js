@@ -48,7 +48,7 @@ h.page = function (template, vars) {
 function parseDate(date) {
   const d = Date.parse(date)
   if (isNaN(d)) {throw new Error(`invalid date '${date}'`)}
-  return d
+  return d // return: epoch (int)
 }
 
 function sortByDate(data) {
@@ -56,14 +56,23 @@ function sortByDate(data) {
   return data
 }
 
+function prettyDate(epoch) {
+  const d = new Date(epoch)
+  const shortMonthName = new Intl.DateTimeFormat("en-US", {month: "short"}).format;
+  return `${d.getFullYear()} ${shortMonthName(d)} ${d.getDay()}`
+}
+
 h.readMany = function (dir) {
   const fnames = fs.readdirSync(dir)
   const data = fnames.map(fname => {
-    return {
+    let view = {
       fname: fname,
       body: h.body(path.join(dir, fname)),
-      ...h.meta(path.join(dir, fname))
+      humandate: () => prettyDate(parseDate(view.date)),
+      ...h.meta(path.join(dir, fname)),
     }
+
+    return view
   })
   sortByDate(data)
 
