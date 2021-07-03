@@ -1,7 +1,7 @@
 title: Spectral Theorem
 subtitle: When can a matrix be diagonalized?
 date: 2021-05-07
-draft: true
+cats: ["draft"]
 
 
 Diagonalizing a matrix $A$ means changing into a [basis](https://youtu.be/P2LTAUO1TdA) where $A$ is diagonal.<br>
