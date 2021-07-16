@@ -80,4 +80,6 @@ h.readMany = function (dir) {
   return data
 }
 
+h.titleCase = (cat) => cat[0].toUpperCase() + cat.slice(1)
+
 module.exports = h

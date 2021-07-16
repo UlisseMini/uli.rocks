@@ -23,7 +23,6 @@ function buildPosts() {
 function buildCats(posts) {
   const unique = (x) => Array.from(new Set(x))
   const catPath = (cat) => `${cat}.html`
-  const titleCase = (cat) => cat[0].toUpperCase() + cat.slice(1)
 
   let cats = new Set(posts.flatMap(p => unique(p.cats)))
   cats.add('index') // default cat (also default in readMany)
@@ -33,7 +32,7 @@ function buildCats(posts) {
     return {
       'cat': cat,
       'href': catPath(cat),
-      'humancat': () => titleCase(cat),
+      'humancat': () => h.titleCase(cat),
     }
   })
 
