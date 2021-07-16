@@ -21,20 +21,6 @@ posts.forEach(vars => {
   h.write('p/' + vars.fname, html)
 })
 
-// Build journal
-const journals = h.readMany('content/journal/')
-
-let html = h.page('journal-list', {
-  journals: journals.map(vars => {
-    return {
-      body: md.render(vars.body),
-      date: vars.date, // or fname, same thing
-    }
-  })
-})
-h.write('j.html', html)
-
-
 // Build the homepage
 
 const unique = (x) => Array.from(new Set(x))
