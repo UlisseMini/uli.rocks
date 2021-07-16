@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.js",
     "watch-build": "rg --files | entr yarn build",
-    "dev": "vite ./site"
+    "dev": "vite ./site",
+    "test": "mocha"
   },
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
@@ -19,6 +20,8 @@
     "yaml": "^2.0.0-1"
   },
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "mocha": "^9.0.2",
     "vite": "^2.3.4"
   }
 }
